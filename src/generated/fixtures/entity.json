@@ -1,0 +1,245 @@
+[
+    {
+        "entity_name": "employee",
+        "description": "Office employees and their details",
+        "fields": [
+            {
+                "field_name": "id",
+                "field_data_type": "AutoPK",
+                "attributes": {}
+            },
+            {
+                "field_name": "left_on",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "joined_on",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "status",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "location",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "department",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "email",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "name",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "employee_id",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            }
+        ]
+    },
+    {
+        "entity_name": "asset",
+        "description": "Office assets and their current status",
+        "fields": [
+            {
+                "field_name": "asset_id",
+                "field_data_type": "AutoPK",
+                "attributes": {}
+            },
+            {
+                "field_name": "condition",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "warranty_until",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "vendor",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "purchase_date",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "serial_no",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "model",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "brand",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "tracking",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "category",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "type",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "asset_tag",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "status",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "location",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "price_inr",
+                "field_data_type": "Integer",
+                "attributes": {}
+            },
+            {
+                "field_name": "current_holder",
+                "field_data_type": "FK",
+                "attributes": {
+                    "target_entity": "employee",
+                    "join_column": "current_holder"
+                }
+            }
+        ]
+    },
+    {
+        "entity_name": "counted_item",
+        "description": "Shared office supplies and quantity tracking",
+        "fields": [
+            {
+                "field_name": "counted_item_id",
+                "field_data_type": "AutoPK",
+                "attributes": {}
+            },
+            {
+                "field_name": "item_code",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "category",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "location",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "name",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "qty_in_use",
+                "field_data_type": "Integer",
+                "attributes": {}
+            },
+            {
+                "field_name": "qty_total",
+                "field_data_type": "Integer",
+                "attributes": {}
+            },
+            {
+                "field_name": "unit_price_inr",
+                "field_data_type": "Integer",
+                "attributes": {}
+            }
+        ]
+    },
+    {
+        "entity_name": "assignment",
+        "description": "Tracks asset assignments to employees",
+        "fields": [
+            {
+                "field_name": "id",
+                "field_data_type": "AutoPK",
+                "attributes": {}
+            },
+            {
+                "field_name": "condition_back",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "returned_on",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "condition_out",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "assigned_on",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "assignment_id",
+                "field_data_type": "CharacterString",
+                "attributes": {}
+            },
+            {
+                "field_name": "notes",
+                "field_data_type": "Text",
+                "attributes": {}
+            },
+            {
+                "field_name": "employee",
+                "field_data_type": "FK",
+                "attributes": {
+                    "target_entity": "employee",
+                    "join_column": "employee"
+                }
+            },
+            {
+                "field_name": "asset",
+                "field_data_type": "FK",
+                "attributes": {
+                    "target_entity": "asset",
+                    "join_column": "asset"
+                }
+            }
+        ]
+    }
+]
